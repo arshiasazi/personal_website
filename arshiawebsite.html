@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arshia Sazi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a1a;
+            background-image: url('https://c.tenor.com/pwcIwNEpbdgAAAAC/tenor.gif'); /* Mobile GIF */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+        @media (min-width: 768px) {
+            body {
+                background-image: url('https://media3.giphy.com/media/ehn0MctmYd8t2/giphy.gif?cid=6c09b952utunp9hsni39z3knl5249fxinv2i6zzgex2kvo33&ep=v1_gifs_search&rid=giphy.gif&ct=g'); /* Replace with your laptop GIF URL */
+            }
+        }
+        .container {
+            background-color: rgba(17, 17, 17, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 90%;
+            max-width: 350px;
+            z-index: 100;
+        }
+        .container h1 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #f67280;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .link:hover {
+            background-color: #ffa31a;
+            transform: scale(1.05);
+        }
+        .link i {
+            margin-right: 10px;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #bbbbbb;
+        }
+        .flame {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, rgba(255,165,0,1) 0%, rgba(255,69,0,1) 100%);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: flicker 0.3s infinite;
+        }
+        @keyframes flicker {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                width: 90%;
+            }
+            .container h1 {
+                font-size: 20px;
+            }
+            .link {
+                padding: 10px;
+                margin: 8px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" role="main">
+        <h1>Arshia's a Cool Dude: Check Him Out</h1>
+        <a class="link" href="https://linkedin.com/in/arshia-sazi-488b80201" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a class="link" href="https://www.instagram.com/arshiasazi/?hl=en" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a class="link" href="https://web.stanford.edu/~asazi/index.html" target="_blank" aria-label="Music I Listen To">
+            <i class="fab fa-spotify"></i> Music I Listen To
+        </a>
+        <a class="link" href="https://web.stanford.edu/~asazi/index.html" target="_blank" aria-label="Music Projects">
+            <i class="fas fa-music"></i> Music Projects
+        </a>
+
+        <div class="footer">Arshia Wrote This HTML Site</div>
+    </div>
+
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            var flame = document.createElement('div');
+            flame.className = 'flame';
+            flame.style.left = e.pageX + 'px';
+            flame.style.top = e.pageY + 'px';
+            document.body.appendChild(flame);
+
+            setTimeout(function() {
+                flame.remove();
+            }, 500);
+        });
+    </script>
+</body>
+</html>
