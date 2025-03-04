@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Centrifuge Control</title>
+</head>
+<body>
+    <h1>Centrifuge Controller</h1>
+    <button onclick="sendCommand('/start')">Start</button>
+    <button onclick="sendCommand('/stop')">Stop</button>
+    <p id="status"></p>
+
+    <script>
+        function sendCommand(command) {
+            fetch("http://<ARDUINO_IP>" + command)
+                .then(response => response.text())
+                .then(data => document.getElementById('status').innerHTML = data)
+                .catch(error => console.error("Error:", error));
+        }
+    </script>
+</body>
+</html>
